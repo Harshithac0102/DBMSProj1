@@ -1,0 +1,72 @@
+SELE_{Payment > 70} (PAY)
+A1,M1,79
+A1,M2,80
+A2,M2,83
+A2,M3,98
+A2,M4,96
+A3,M2,74
+A3,M3,98
+A4,M2,75
+A4,M3,85
+A5,M1,99
+A6,M2,77
+A6,M3,95
+
+PROJ_{ANO} (ACTORS * PAY)
+
+PROJ_{ANO} (SELE_{Payment > 70} (PAY))
+A1
+A1
+A2
+A2
+A2
+A3
+A3
+A4
+A4
+A4
+A5
+A5
+A5
+A6
+A6
+A6
+
+PROJ_{ANO} (SELE_{Payment < 60} (PAY))
+A1
+A1
+A2
+A2
+A2
+A3
+A3
+A4
+A4
+A4
+A5
+A5
+A5
+A6
+A6
+A6
+
+(PROJ_{ANO} (SELE_{Payment > 70} (PAY))) - (PROJ_{ANO} (SELE_{Payment < 60} (PAY)))
+
+(PROJ_{ANO} (SELE_{Payment > 90} (PAY))) U (PROJ_{ANO} (SELE_{ANAME=’Swanson’} (ACTORS)))
+A1
+A1
+A2
+A2
+A2
+A3
+A3
+A4
+A4
+A4
+A5
+A5
+A5
+A6
+A6
+A6
+
